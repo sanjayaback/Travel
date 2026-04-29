@@ -40,6 +40,23 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Deployment
+
+Set these environment variables in your host before building:
+
+- `DATABASE_URL`
+- `NEXTAUTH_URL`
+- `NEXTAUTH_SECRET`
+
+The project runs `prisma generate` automatically after install, so generated Prisma client files do not need to be committed. For a new production database, run:
+
+```bash
+npx prisma db push
+npm run prisma:seed
+```
+
+Use `npm run build` as the production build command and `npm run start` to serve the built app.
+
 ## Demo Logins
 
 - Admin: `admin@travelos.com` / `password123`
